@@ -287,14 +287,12 @@ dictionary Transaction {
 
 <pre><code>
 
-```
 dictionary AuthenticationRequest {
   required OperationHeader header;
   required ServerChallenge challenge;
   Transaction[]            transaction;
   required Policy          policy;
 };
-```
 
 </code><pre>
 
