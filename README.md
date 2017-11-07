@@ -285,16 +285,16 @@ dictionary Transaction {
 
 ### 2. Authentication Request Message
 
-<pre><code>
-
+```
 dictionary AuthenticationRequest {
   required OperationHeader header;
   required ServerChallenge challenge;
   Transaction[]            transaction;
   required Policy          policy;
 };
+```
 
-</code><pre>
+
 
 * 인증을 요청할 때 보내는 메세지의 형태로, 인증 과정이기 때문에 header의 options 부분은 "Auth"로 지정되어야 한다.
 * Challenge는 사용자 요청의 유효기간을 파악하기 위해서 랜덤하게 부여된다.
