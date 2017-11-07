@@ -5,7 +5,7 @@
 
 ## A. Register Operation
 
-![FIDO_register_operation_diagram](.\img\FIDO_register_operation_diagram.png)
+![FIDO_register_operation_diagram](./img/FIDO_register_operation_diagram.png)
 
 ### 1. RegistrationRequest dictionary
 
@@ -556,10 +556,10 @@ tpt7q",
 <pre><code>
 
 ```
-dictionary DeregisterAuthenticator {
-  required AAID  aaid;
-  required KeyID keyID;
-};
+  dictionary DeregisterAuthenticator {
+    required AAID  aaid;
+    required KeyID keyID;
+  };
 ```
 
 </code></pre>
@@ -591,5 +591,5 @@ dictionary DeregistrationRequest {
 </code></pre> 
 
 * 위 DeregisterAuthenticator 프로토콜과 OperationHeader를 가지는 삭제 요청의 Profile은 위와 같다.
-  * 사용자가 로컬에서 삭제 하는지 여부는 상관하지 않고 서버에서 삭제하고 끝나기 때문에 별도의 challenge는 필요 없어 보인다.
+* 사용자가 로컬에서 삭제 하는지 여부는 상관하지 않고 서버에서 삭제하고 끝나기 때문에 별도의 challenge는 필요 없어 보인다.
 
