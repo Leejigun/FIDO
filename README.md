@@ -253,12 +253,12 @@ dl3NNDDTx9d-aSR_6hGgclrU2F2Yj-12S67v5VmQHj4eWVseLulHdpk2v_hHtKSvv_DFqL4n
 
 ## B. Authentication Operation
 
-![FIDO_authentication_operation_diagram](D:\gitProject\FIDO\img\FIDO_authentication_operation_diagram.png)
+![FIDO_authentication_operation_diagram](./img/FIDO_authentication_operation_diagram.png)
 
 * **등록 절차와의 차이점으로는 초기 사용자 인증 과정이 생략된다는 것이다.** 
 * 초기에 사용자의 생체 인증을 등록하기 이전에는 사용자의 정보를 인증하는 과정을 통해서 생체 인증의 대상이 누구인지 서버에 저장되는데, 이미 서버에 사용자의 정보가 저장된 상태인 인증 과정에서는 생체 인증만으로 서버에 접근해 사용자를 인증 할 수 있기 때문이다.
 
-![FIDO_authentication_operation_cryptographic_data_flow](D:\gitProject\FIDO\img\FIDO_authentication_operation_cryptographic_data_flow.png)
+![FIDO_authentication_operation_cryptographic_data_flow](./img/FIDO_authentication_operation_cryptographic_data_flow.png)
 
 * 위 과정은 서버로부터 전달 받은 appID, Policy 그리고 challenge 값과 함께 Authenticator로 전달되고 되돌아 오는 과정에서 거치는 보안 과정에 대해서 나타낸 것이다.
 * 서버에서는 확인을 위한 appID, 유효기간 검사를 위한 challenge와 policy 정보를 client에 넘겨준다. Client는 ASM으로 다시 정보를 넘겨주고 기기로 key handle data, access key, 그리고 기타 정보를 해싱한 fcp를 기기로 넘겨준다.
