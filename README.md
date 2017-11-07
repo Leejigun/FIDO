@@ -29,7 +29,14 @@ dictionary RegistrationRequest {
 
 * Username 부분은 사람이 읽을 수 있는 사용자의 이름으로 서버에서 사용자를 구분하기 위해 사용된다.
 
-* Policy 부분은 잘 이해가 안된다.
+* policy는 승인된 기기의 사양과 승인되지 않은 기기의 사양을 제공한다.
+
+  * ```
+    dictionary Policy {
+        required MatchCriteria[][] accepted;
+        MatchCriteria[]            disallowed;
+    };
+    ```
 
 #### 예시 코드
 
@@ -293,8 +300,6 @@ dictionary AuthenticationRequest {
   required Policy          policy;
 };
 ```
-
-
 
 * 인증을 요청할 때 보내는 메세지의 형태로, 인증 과정이기 때문에 header의 options 부분은 "Auth"로 지정되어야 한다.
 * Challenge는 사용자 요청의 유효기간을 파악하기 위해서 랜덤하게 부여된다.
